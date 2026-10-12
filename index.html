@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="Free matrix calculator for addition, subtraction and multiplication. Works entirely in your browser.">
+  <title>Matrix Calculator</title>
+  <link rel="stylesheet" href="./assets/style.css">
+  <script src="./assets/app.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="hero"><div class="eyebrow">LINEAR ALGEBRA TOOLKIT</div><h1>Matrix Calculator</h1><p>Add, subtract, and multiply matrices directly in your browser.</p></header>
+    <section class="workspace">
+      <div class="panel"><div class="panelhead"><h2>Matrix A</h2><span id="aShape" class="shape">2 × 2</span></div><div class="controls"><label>Rows <select id="aRows" aria-label="Matrix A rows"></select></label><label>Columns <select id="aCols" aria-label="Matrix A columns"></select></label></div><div class="matrix-scroll"><div id="aGrid" class="matrix-grid"></div></div></div>
+      <div class="panel"><div class="panelhead"><h2>Matrix B</h2><span id="bShape" class="shape">2 × 2</span></div><div class="controls"><label>Rows <select id="bRows" aria-label="Matrix B rows"></select></label><label>Columns <select id="bCols" aria-label="Matrix B columns"></select></label></div><div class="matrix-scroll"><div id="bGrid" class="matrix-grid"></div></div></div>
+    </section>
+    <section class="operations panel"><h2>Operation</h2><div class="opbuttons" role="group" aria-label="Matrix operation"><button type="button" class="op active" data-op="add">+ Add</button><button type="button" class="op" data-op="subtract">− Subtract</button><button type="button" class="op" data-op="multiply">× Multiply</button></div><p id="rule" class="hint">Addition requires identical matrix dimensions.</p><div class="actions"><button type="button" id="calculate" class="primary">Calculate result →</button><button type="button" id="swap">Swap A / B</button><button type="button" id="reset">Reset example</button></div></section>
+    <section class="panel result-panel" aria-live="polite"><div class="panelhead"><h2>Result <span id="resultShape" class="shape"></span></h2><button type="button" id="copy" disabled>Copy result</button></div><p id="message" class="hint">Select an operation and calculate.</p><div class="matrix-scroll"><div id="resultGrid" class="matrix-grid result-grid"></div></div></section>
+    <footer>Open-source matrix calculator · HTML, CSS & JavaScript · Supports 1–10 rows and columns</footer>
+  </main>
+</body>
+</html>
